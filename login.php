@@ -1,4 +1,10 @@
-<?php include 'inc/header.php'; ?>
+<?php include 'inc/header.php'; 
+
+if( @$_SESSION['login'] == @sha1(md5(IP().$seller_code)) ){
+    go(site);
+}
+
+?>
 <div class="uk-offcanvas-content">
     <?php include 'inc/topbar.php'; ?>
     <main>
@@ -12,25 +18,16 @@
                                     <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-margin-top" uk-grid>
                                         <section class="uk-width-1-1">
                                             <h2 class="uk-text-center">Bayi Giriş</h2>
-                                            <form>
+                                            <form action="" method="POST" onsubmit="return false;" id="seller-login-form">
                                                 <div class="uk-grid-small uk-child-width-1-1" uk-grid>
-                                                    <div><label>
-                                                            <div class="uk-form-label uk-form-label-required">Name</div><input class="uk-input" type="text" required>
-                                                        </label></div>
-                                                    <div><label>
-                                                            <div class="uk-form-label uk-form-label-required">Email</div><input class="uk-input" type="email" required>
-                                                        </label></div>
-                                                    <div><label>
-                                                            <div class="uk-form-label">Topic</div><select class="uk-select">
-                                                                <option>Customer service</option>
-                                                                <option>Tech support</option>
-                                                                <option>Other</option>
-                                                            </select>
-                                                        </label></div>
-                                                    <div><label>
-                                                            <div class="uk-form-label">Message</div><textarea class="uk-textarea" rows="5"></textarea>
-                                                        </label></div>
-                                                    <div class="uk-text-center"><button class="uk-button uk-button-primary">Send</button></div>
+                                                    <div>
+                                                        <input class="uk-input" placeholder="E-Posta | Bayi Kodu" name="email_or_code" type="text" required>
+                                                    </div>
+                                                    <div>
+                                                        <input class="uk-input" placeholder="Bayi Şifresi" name="password" type="password" required>
+                                                    </div>
+                                                    <p><a href="#" class="text-gray">Şifremi Unuttum</a></p>
+                                                    <div class="uk-text-center"><button id="loginButton" onclick="loginSeller()" class="uk-button uk-button-primary">Giriş Yap</button></div>
                                                 </div>
                                             </form>
                                         </section>
@@ -65,7 +62,7 @@
                                                     <div>
                                                         <input class="uk-input" placeholder="Bayi Vergi Dairesi" name="tax_office" type="text" required>
                                                     </div>
-                                                    <div class="uk-text-center"><button id="registerSeller" onclick="registerSeller()" class="uk-button uk-button-primary">Kayıt Ol</button></div>
+                                                    <div class="uk-text-center"><button id="registerButton" onclick="registerSeller()" class="uk-button uk-button-primary">Kayıt Ol</button></div>
                                                 </div>
                                             </form>
                                         </section>

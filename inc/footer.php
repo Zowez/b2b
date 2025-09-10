@@ -245,6 +245,7 @@
         </div>
     </div>
     <script src="scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/custom.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyClyjCemJi4m2q78gNeGkhlckpdH1hzTYA&amp;callback=initMap"
         async defer></script>

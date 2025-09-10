@@ -1,4 +1,10 @@
-<?php require_once 'system/function.php'; ?>
+<?php require_once 'system/function.php'; 
+
+if($row['status'] == 0){
+  go(site.'maintenance.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
