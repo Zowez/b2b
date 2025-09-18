@@ -1,7 +1,7 @@
 <?php 
 require_once '../system/function.php';
 
-if( @$_SESSION['login'] == @sha1(md5(IP().$seller_code)) ){
+if( @$_SESSION['login'] == @sha1(md5(IP().$_SESSION['code'])) ){
     go(site);
 }
 

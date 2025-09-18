@@ -92,70 +92,9 @@
                                                 uk-icon="icon: chevron-right; ratio: .75;"></span></a></li>
                                 </ul>
                             </li>
-                            <li class="uk-parent"><a href="brands.html">Brands</a>
-                                <ul class="uk-nav-sub uk-list-divider">
-                                    <li><a href="subcategory.html">Apple</a></li>
-                                    <li><a href="subcategory.html">Samsung</a></li>
-                                    <li><a href="subcategory.html">Sony</a></li>
-                                    <li><a href="subcategory.html">Microsoft</a></li>
-                                    <li><a href="subcategory.html">Intel</a></li>
-                                    <li><a href="subcategory.html">HP</a></li>
-                                    <li><a href="subcategory.html">LG</a></li>
-                                    <li><a href="subcategory.html">Lenovo</a></li>
-                                    <li><a href="subcategory.html">ASUS</a></li>
-                                    <li><a href="subcategory.html">Acer</a></li>
-                                    <li><a href="subcategory.html">Dell</a></li>
-                                    <li><a href="subcategory.html">Canon</a></li>
-                                    <li class="uk-text-center"><a class="uk-link-muted uk-text-uppercase tm-link-to-all"
-                                            href="brands.html"><span>see all brands</span><span
-                                                uk-icon="icon: chevron-right; ratio: .75;"></span></a></li>
-                                </ul>
-                            </li>
-                            <li class="uk-parent"><a href="#">Pages</a>
-                                <ul class="uk-nav-sub uk-list-divider">
-                                    <li><a href="subcategory.html">Catalog</a></li>
-                                    <li><a href="subcategory.html">Category</a></li>
-                                    <li><a href="subcategory.html">Subcategory</a></li>
-                                    <li><a href="subcategory.html">Product</a></li>
-                                    <li><a href="subcategory.html">Cart</a></li>
-                                    <li><a href="subcategory.html">Checkout</a></li>
-                                    <li><a href="subcategory.html">Compare</a></li>
-                                    <li><a href="subcategory.html">Brands</a></li>
-                                    <li><a href="subcategory.html">Compare</a></li>
-                                    <li><a href="subcategory.html">Account</a></li>
-                                    <li><a href="subcategory.html">Favorites</a></li>
-                                    <li><a href="subcategory.html">Personal</a></li>
-                                    <li><a href="subcategory.html">Settings</a></li>
-                                    <li><a href="subcategory.html">About</a></li>
-                                    <li><a href="subcategory.html">Contacts</a></li>
-                                    <li><a href="subcategory.html">Blog</a></li>
-                                    <li><a href="subcategory.html">News</a></li>
-                                    <li><a href="subcategory.html">Article</a></li>
-                                    <li><a href="subcategory.html">FAQ</a></li>
-                                    <li><a href="subcategory.html">Delivery</a></li>
-                                    <li><a href="subcategory.html">404</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="compare.html">Compare<span class="uk-badge uk-margin-xsmall-left">3</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="uk-card-small uk-card-body">
-                        <ul class="uk-nav uk-nav-default">
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="#">Payment</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="uk-card-body">
-                        <ul class="uk-iconnav uk-flex-center">
-                            <li><a href="#" title="Facebook" uk-icon="facebook"></a></li>
-                            <li><a href="#" title="Twitter" uk-icon="twitter"></a></li>
-                            <li><a href="#" title="YouTube" uk-icon="youtube"></a></li>
-                            <li><a href="#" title="Instagram" uk-icon="instagram"></a></li>
+                            <li><a href="<?php echo site; ?>">Anasayfa</a></li>
+                            <li><a href="<?php echo site; ?>/contacts.php">Bize Ulaşın</a></li>
+
                         </ul>
                     </nav>
                 </div>
@@ -235,9 +174,9 @@
                         </div>
                         <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-margin-small" uk-grid>
                             <div><a class="uk-button uk-button-default uk-margin-small uk-width-1-1"
-                                    href="cart.html">view cart</a></div>
+                                    href="cart.php">view cart</a></div>
                             <div><a class="uk-button uk-button-primary uk-margin-small uk-width-1-1"
-                                    href="checkout.html">checkout</a></div>
+                                    href="checkout.php">checkout</a></div>
                         </div>
                     </footer>
                 </div>
@@ -246,7 +185,7 @@
     </div>
     <script src="scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="scripts/custom.js"></script>
+    <script src="scripts/custom.js?v=2"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyClyjCemJi4m2q78gNeGkhlckpdH1hzTYA&amp;callback=initMap"
         async defer></script>
 </body>

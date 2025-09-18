@@ -35,32 +35,40 @@ if($query->rowCount()){
 define("site",$site);
 define("title",$row['title']);
 
-$logincontrol = $db->prepare("SELECT * FROM sellers WHERE id=:id AND code=:c");
-$logincontrol->execute([':id'=> @$_SESSION['id'],':c'=> @$_SESSION['code']]);
-if($logincontrol->rowCount()){
-    $par = $logincontrol->fetch(PDO::FETCH_ASSOC);
+# Login Check
 
-    if( $par['status'] == 1 ){
-        $seller_id = $par['id'];
-        $seller_code = $par['code'];
-        $seller_name = $par['name'];
-        $seller_email = $par['email'];
-        $seller_discount = $par['discount'];
-        $seller_phone = $par['phone'];
-        $seller_tax_number = $par['tax_number'];
-        $seller_tax_office = $par['tax_office'];
-        $seller_fax = $par['fax'];
-        $seller_site = $par['site'];
-        $seller_status = $par['status'];
+if(  @$_SESSION['login'] == @sha1(md5(IP().$_SESSION['code'])) ){
+    $logincontrol = $db->prepare("SELECT * FROM sellers WHERE id=:id AND code=:c");
+    $logincontrol->execute([':id'=> @$_SESSION['id'],':c'=> @$_SESSION['code']]);
+    if($logincontrol->rowCount()){
+        $par = $logincontrol->fetch(PDO::FETCH_ASSOC);
+
+        if( $par['status'] == 1 ){
+            $seller_id = $par['id'];
+            $seller_code = $par['code'];
+            $seller_name = $par['name'];
+            $seller_date = $par['date'];
+            $seller_logo = $par['logo'];
+            $seller_email = $par['email'];
+            $seller_discount = $par['discount'];
+            $seller_phone = $par['phone'];
+            $seller_tax_number = $par['tax_number'];
+            $seller_tax_office = $par['tax_office'];
+            $seller_fax = $par['fax'];
+            $seller_site = $par['site'];
+            $seller_status = $par['status'];
+        }else{
+            @session_destroy();
+            go(site);
+        }
+
+        
+
     }else{
         @session_destroy();
-        go(site);
     }
 
-    
-
-}else{
-    @session_destroy();
 }
+
 
 ?>

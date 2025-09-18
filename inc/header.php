@@ -4,6 +4,9 @@ if($row['status'] == 0){
   go(site.'maintenance.php');
 }
 
+print_r( @$_SESSION);
+print_r( $site);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +18,11 @@ if($row['status'] == 0){
     <title>Home</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="styles/style.css">
+    
     <script src="scripts/uikit.js"></script>
     <script src="scripts/uikit-icons.js"></script>
+
+
 </head>
 
 <body>
